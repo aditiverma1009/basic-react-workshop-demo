@@ -39,15 +39,6 @@ class App extends React.Component {
         <Footer />
       </div>
     );
-
-    return (
-      <div className="App">
-        <Header />
-        <Body />
-        <Contact />
-        <Footer />
-      </div>
-    );
   }
 }
 
