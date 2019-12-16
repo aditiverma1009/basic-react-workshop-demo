@@ -1,14 +1,15 @@
 import React from 'react';
-import './App.scss';
+import './Header.scss';
+import PropTypes from 'prop-types';
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-       basic
-      </div>
-    );
-  }
-}
+const Header = (props) => (
+  <div className="header">
+    <button type="button" className="home" onClick={() => props.handleHeaderClick(true)}>Home</button>
+    <button type="button" className="contact" onClick={() => props.handleHeaderClick(false)}>Contact</button>
+  </div>
+);
 
-export default App;
+Header.propTypes = {
+  handleHeaderClick: PropTypes.func.isRequired,
+};
+export default Header;
